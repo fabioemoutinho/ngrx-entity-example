@@ -1,0 +1,6 @@
+<form (submit)="onSubmit()">
+  <input type="text" [(ngModel)]="newUser" name="user" />
+  <button>Add User</button>
+</form>
+<p *ngIf="loading$ | async">loading</p>
+<li *ngFor="let user of users$ | async">{{ user.name }}</li>
